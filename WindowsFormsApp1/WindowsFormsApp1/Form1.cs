@@ -63,12 +63,7 @@ namespace WindowsFormsApp1
                 textBox_input.Text = textBox_input.Text.Substring(0, textBox_input.Text.Length - 1);
             }
         }
-        public static string AddCommasToNumber(double number)
-        {
-            // 입력 받았을 때 계산 텍스트 변경 및 텍스트박스 리셋
-            textBox_print.Text = Calculation(textBox_input.Text);
-            //textBox_input.Text = "";
-        }
+
 
         // 배용진
         // 더하기 버튼, 누르면 계산기에 더하기 추가됨
