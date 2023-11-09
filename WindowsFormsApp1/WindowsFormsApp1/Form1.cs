@@ -65,7 +65,182 @@ namespace WindowsFormsApp1
         }
         public static string AddCommasToNumber(double number)
         {
-            return number.ToString("N0");
+            // 입력 받았을 때 계산 텍스트 변경 및 텍스트박스 리셋
+            textBox_print.Text = Calculation(textBox_input.Text);
+            //textBox_input.Text = "";
         }
+
+        // 배용진
+        // 더하기 버튼, 누르면 계산기에 더하기 추가됨
+        private void button_plu_Click(object sender, EventArgs e)
+        {
+            string text = textBox_input.Text;
+            char lastcharacter = default;
+            if (textBox_input.Text == "")
+            {
+                lastcharacter = default;
+            }
+            else
+            {
+                lastcharacter = text[text.Length - 1];
+            }
+
+            // 기호 있으면 교체
+            if (lastcharacter.ToString() == "+" || lastcharacter.ToString() == "-" ||
+                lastcharacter.ToString() == "*" || lastcharacter.ToString() == "/" ||
+                lastcharacter.ToString() == "%")
+            {
+                textBox_input.Text = text.Remove(text.Length - 1);
+                textBox_input.Text += "+";
+            }
+            else if (lastcharacter == default || lastcharacter.ToString() == "-")
+            {
+                // 아무것도 입력되지 않는 상태일 때 작동
+                textBox_input.Text = "";
+            }
+            else
+            {
+                textBox_input.Text += "+";
+            }
+        }
+
+        // 배용진
+        // 빼기 버튼
+        private void button_min_Click(object sender, EventArgs e)
+        {
+            string text = textBox_input.Text;
+            char lastcharacter = default;
+            if (textBox_input.Text == "")
+            {
+                lastcharacter = default;
+            }
+            else
+            {
+                lastcharacter = text[text.Length - 1];
+            }
+
+            // 기호 있으면 교체
+            if (lastcharacter.ToString() == "+" || lastcharacter.ToString() == "-" ||
+                lastcharacter.ToString() == "*" || lastcharacter.ToString() == "/" ||
+                lastcharacter.ToString() == "%")
+            {
+                textBox_input.Text = text.Remove(text.Length - 1);
+                textBox_input.Text += "-";
+            }
+            else if (lastcharacter == default || lastcharacter.ToString() == "-")
+            {
+                // 아무것도 입력되지 않는 상태일 때 작동
+                textBox_input.Text += "-";
+            }
+            else
+            {
+                textBox_input.Text += "-";
+            }
+        }
+        // 배용진
+        // 곱하기 버튼
+        private void button_mul_Click(object sender, EventArgs e)
+        {
+
+            string text = textBox_input.Text;
+            char lastcharacter = default;
+            if (textBox_input.Text == "")
+            {
+                lastcharacter = default;
+            }
+            else
+            {
+                lastcharacter = text[text.Length - 1];
+            }
+
+            // 기호 있으면 교체
+            if (lastcharacter.ToString() == "+" || lastcharacter.ToString() == "-" ||
+                lastcharacter.ToString() == "*" || lastcharacter.ToString() == "/" ||
+                lastcharacter.ToString() == "%")
+            {
+                textBox_input.Text = text.Remove(text.Length - 1);
+                textBox_input.Text += "*";
+            }
+            else if (lastcharacter == default || lastcharacter.ToString() == "-")
+            {
+                // 아무것도 입력되지 않는 상태일 때 작동
+                textBox_input.Text = "";
+            }
+            else
+            {
+                textBox_input.Text += "*";
+            }
+        }
+        // 배용진
+        // 나누기 버튼 ( 몫 )
+        private void button_div_Click(object sender, EventArgs e)
+        {
+            string text = textBox_input.Text;
+            char lastcharacter = default;
+            if (textBox_input.Text == "")
+            {
+                lastcharacter = default;
+            }
+            else
+            {
+                lastcharacter = text[text.Length - 1];
+            }
+
+            // 기호 있으면 교체
+            if (lastcharacter.ToString() == "+" || lastcharacter.ToString() == "-" ||
+                lastcharacter.ToString() == "*" || lastcharacter.ToString() == "/" ||
+                lastcharacter.ToString() == "%")
+            {
+                textBox_input.Text = text.Remove(text.Length - 1);
+                textBox_input.Text += "/";
+            }
+            else if (lastcharacter == default || lastcharacter.ToString() == "-")
+            {
+                // 아무것도 입력되지 않는 상태일 때 작동
+                textBox_input.Text += "";
+            }
+            else
+            {
+                textBox_input.Text += "/";
+            }
+        }
+        // 배용진
+        // 나누기 버튼 ( 나머지 )
+        private void button_rem_Click(object sender, EventArgs e)
+        {
+            string text = textBox_input.Text;
+            char lastcharacter = default;
+            if (textBox_input.Text == "")
+            {
+                lastcharacter = default;
+            }
+            else
+            {
+                lastcharacter = text[text.Length - 1];
+            }
+
+            // 기호 있으면 교체
+            if (lastcharacter.ToString() == "+" || lastcharacter.ToString() == "-" ||
+                lastcharacter.ToString() == "*" || lastcharacter.ToString() == "/" ||
+                lastcharacter.ToString() == "%")
+            {
+                textBox_input.Text = text.Remove(text.Length - 1);
+                textBox_input.Text += "%";
+            }
+            else if (lastcharacter == default || lastcharacter.ToString() == "-")
+            {
+                // 아무것도 입력되지 않는 상태일 때 작동
+                textBox_input.Text = "";
+            }
+            else
+            {
+                textBox_input.Text += "%";
+            }
+        }
+
+        // 배용진 여기까지
+
+        // 배용진
+        // 
     }
 }
